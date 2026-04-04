@@ -1,0 +1,62 @@
+/* ========================================
+   GLOBAL SANITARY & HARDWARE — INDEX.CSS
+   ======================================== */
+
+:root {
+    --brand-primary: #0F172A;
+    --brand-accent: #3B82F6;
+    --brand-secondary: #64748B;
+    --bg-page: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-glass: rgba(255, 255, 255, 0.85);
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --border-light: #E2E8F0;
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --nav-height: 80px;
+}
+
+/* Base Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg-page); 
+    color: var(--text-primary); 
+    line-height: 1.6; 
+}
+
+/* Layout */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.section-padding { padding: 80px 0; }
+.text-center { text-align: center; }
+
+/* Typography */
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--brand-primary); }
+.heading-lg { font-size: 3.5rem; line-height: 1.1; margin-bottom: 24px; }
+.heading-md { font-size: 2.5rem; margin-bottom: 16px; }
+.lead { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 32px; }
+
+/* Global Components */
+.btn { 
+    display: inline-flex; align-items: center; justify-content: center; 
+    padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; 
+    transition: all 0.3s ease; text-decoration: none; gap: 8px; font-size: 0.95rem;
+}
+.btn-primary { background: var(--brand-accent); color: white; border: none; }
+.btn-primary:hover { background: #2563EB; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-outline { border: 2px solid var(--brand-primary); color: var(--brand-primary); }
+.btn-outline:hover { background: var(--brand-primary); color: white; }
+
+.glass { background: var(--bg-glass); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-light); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .heading-lg { font-size: 2.5rem; }
+    .heading-md { font-size: 1.8rem; }
+    .btn { padding: 10px 20px; }
+}
