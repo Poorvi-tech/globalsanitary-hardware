@@ -7,6 +7,12 @@ const Products = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [visibleCount, setVisibleCount] = useState(6);
+
+    // Reset visible count when category or search changes
+    useEffect(() => {
+        setVisibleCount(6);
+    }, [activeCategory, searchTerm]);
 
     // Filter logic
     const filteredProducts = useMemo(() => {
@@ -168,7 +174,7 @@ const Products = () => {
                     style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '32px' }}
                 >
                     <AnimatePresence>
-                        {filteredProducts.map(item => (
+                        {filteredProducts.slice(0, visibleCount).map(item => (
                             <motion.div 
                                 key={item.id} 
                                 layout
@@ -213,6 +219,44 @@ const Products = () => {
                         ))}
                     </AnimatePresence>
                 </motion.div>
+                
+                {/* Load More Button */}
+                {filteredProducts.length > visibleCount && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        style={{ textAlign: 'center', marginTop: '48px' }}
+                    >
+                        <button 
+                            onClick={() => setVisibleCount(prev => prev + 6)}
+                            className="btn btn-outline"
+                            style={{ 
+                                padding: '14px 40px', 
+                                borderRadius: '14px', 
+                                display: 'inline-flex', 
+                                alignItems: 'center', 
+                                gap: '10px',
+                                fontSize: '1rem',
+                                border: '2px solid var(--brand-accent)',
+                                color: 'var(--brand-accent)',
+                                background: 'transparent'
+                            }}
+                        >
+                            <span>Show More Products</span>
+                            <motion.div
+                                animate={{ y: [0, 5, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m6 9 6 6 6-6"/>
+                                </svg>
+                            </motion.div>
+                        </button>
+                        <p style={{ marginTop: '12px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                            Showing {Math.min(visibleCount, filteredProducts.length)} of {filteredProducts.length} products
+                        </p>
+                    </motion.div>
+                )}
 
                 {filteredProducts.length === 0 && (
                     <motion.div 
@@ -291,7 +335,7 @@ const Products = () => {
                             <div style={{ color: 'white' }}>
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
                                     <p style={{ color: 'var(--brand-accent)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>{selectedProduct.brand}</p>
-                                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '24px', lineHeight: 1.1 }}>{selectedProduct.name}</h2>
+                                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '24px', lineHeight: 1.1, color: '#fff' }}>{selectedProduct.name}</h2>
                                     
                                     <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '16px', marginBottom: '32px' }}>
                                         <span style={{ fontSize: '2.5rem', fontWeight: 800, color: '#fff' }}>₹{selectedProduct.price}</span>
