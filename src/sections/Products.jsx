@@ -38,16 +38,10 @@ const Products = () => {
         return diffInDays <= 7;
     };
 
-    // Calculate discount percentage
-    const getDiscount = (price, marketPrice) => {
-        const p = parseFloat(price.replace(/,/g, ''));
-        const m = parseFloat(marketPrice.replace(/,/g, ''));
-        if (!p || !m) return null;
-        return Math.round(((m - p) / m) * 100);
-    };
+
 
     const handleWhatsAppEnquiry = (product) => {
-        const message = `Hi! I'm interested in the ${product.name} (${product.brand}). Price: ₹${product.price}. Please share more details.`;
+        const message = `Hi! I'm interested in the ${product.name} (${product.brand}). Please share more details.`;
         const whatsappUrl = `https://wa.me/919993004008?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
@@ -138,19 +132,14 @@ const Products = () => {
                                             <span style={{ position: 'absolute', top: '12px', right: '12px', background: '#10B981', color: 'white', padding: '6px 12px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
                                                 NEW ARRIVAL
                                             </span>
-                                            {getDiscount(item.price, item.marketPrice) && (
-                                                <span style={{ position: 'absolute', top: '12px', left: '12px', background: '#f43f5e', color: 'white', padding: '6px 12px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-                                                    {getDiscount(item.price, item.marketPrice)}% OFF
-                                                </span>
-                                            )}
+
                                         </div>
                                         <div style={{ padding: '24px' }}>
                                             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '8px', textTransform: 'uppercase', fontWeight: 600 }}>{item.brand}</p>
                                             <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', fontWeight: 700, color: '#0f172a', height: '1.5em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{item.name}</h3>
                                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                    <span style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--brand-primary)' }}>₹{item.price}</span>
-                                                    <span style={{ fontSize: '0.95rem', color: '#94a3b8', textDecoration: 'line-through' }}>₹{item.marketPrice}</span>
+                                                    <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>Ready to Enquiry</span>
                                                 </div>
                                                 <button 
                                                     onClick={(e) => { e.stopPropagation(); handleWhatsAppEnquiry(item); }}
@@ -192,19 +181,14 @@ const Products = () => {
                                         style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
                                         onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1620626011761-9963d7521476?auto=format&fit=crop&q=80&w=400'}
                                     />
-                                    {getDiscount(item.price, item.marketPrice) && (
-                                        <span style={{ position: 'absolute', top: '12px', left: '12px', background: '#f43f5e', color: 'white', padding: '6px 12px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-                                            {getDiscount(item.price, item.marketPrice)}% OFF
-                                        </span>
-                                    )}
+
                                 </div>
                                 <div style={{ padding: '24px' }}>
                                     <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '8px', textTransform: 'uppercase', fontWeight: 600 }}>{item.brand || 'Premium Quality'}</p>
                                     <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', fontWeight: 700, color: '#0f172a', height: '1.5em', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{item.name}</h3>
                                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                            <span style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--brand-primary)' }}>₹{item.price}</span>
-                                            <span style={{ fontSize: '0.95rem', color: '#94a3b8', textDecoration: 'line-through' }}>₹{item.marketPrice}</span>
+                                            <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 500 }}>Premium Quality Product</span>
                                         </div>
                                         <button 
                                             onClick={(e) => { e.stopPropagation(); handleWhatsAppEnquiry(item); }}
@@ -325,11 +309,7 @@ const Products = () => {
                                     alt={selectedProduct.name}
                                     style={{ maxWidth: '100%', maxHeight: '60vh', objectFit: 'contain', borderRadius: '8px' }}
                                 />
-                                {getDiscount(selectedProduct.price, selectedProduct.marketPrice) && (
-                                    <div style={{ position: 'absolute', top: '-15px', left: '-15px', background: '#f43f5e', color: 'white', padding: '10px 20px', borderRadius: '12px', fontWeight: 800, fontSize: '1.1rem', boxShadow: '0 10px 20px rgba(244, 63, 94, 0.4)' }}>
-                                        {getDiscount(selectedProduct.price, selectedProduct.marketPrice)}% OFF
-                                    </div>
-                                )}
+
                             </div>
 
                             <div style={{ color: 'white' }}>
@@ -337,16 +317,13 @@ const Products = () => {
                                     <p style={{ color: 'var(--brand-accent)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>{selectedProduct.brand}</p>
                                     <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '24px', lineHeight: 1.1, color: '#fff' }}>{selectedProduct.name}</h2>
                                     
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '16px', marginBottom: '32px' }}>
-                                        <span style={{ fontSize: '2.5rem', fontWeight: 800, color: '#fff' }}>₹{selectedProduct.price}</span>
-                                        <span style={{ fontSize: '1.5rem', color: '#94a3b8', textDecoration: 'line-through' }}>₹{selectedProduct.marketPrice}</span>
-                                    </div>
+
 
                                     <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '32px' }}>
                                         <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                                             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><CheckCircle2 size={18} color="#10B981" /> Authorized Brand Product</li>
                                             <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><CheckCircle2 size={18} color="#10B981" /> High Durability Material</li>
-                                            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><CheckCircle2 size={18} color="#10B981" /> Best Price Guarantee</li>
+                                            <li style={{ display: 'flex', alignItems: 'center', gap: '12px' }}><CheckCircle2 size={18} color="#10B981" /> Genuine Quality Assured</li>
                                         </ul>
                                     </div>
 

@@ -17,7 +17,7 @@ const About = () => {
                         <h4 style={{ color: 'var(--brand-accent)', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem', marginBottom: '16px' }}>Our Story</h4>
                         <h2 className="heading-md" style={{ marginBottom: '24px' }}>Serving Sagar with Excellence Since 2024</h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '32px', lineHeight: '1.8' }}>
-                            Global Sanitary And Hardware was founded with a clear mission: to provide the people of Sagar with the highest quality hardware and plumbing solutions at fair prices. 
+                            Global Sanitary And Hardware was founded with a clear mission: to provide the people of Sagar with the highest quality hardware and plumbing solutions at unbeatable market value. 
                             <br /><br />
                             In a short time, we have become a trusted name for builders, homeowners, and contractors alike. We believe in the power of quality materials to build lasting homes.
                         </p>
