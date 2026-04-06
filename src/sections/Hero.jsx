@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
     return (
         <section id="home" className="section-padding" style={{ background: 'var(--bg-page)', minHeight: '80vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-            <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'center' }}>
+            <div className="container hero-grid">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -14,7 +14,7 @@ const Hero = () => {
                     <span className="badge" style={{ display: 'inline-block', marginBottom: '16px' }}>Premium Hardware & Sanitaryware</span>
                     <h1 className="heading-lg" style={{ marginBottom: '20px' }}>Global Sanitary And Hardware</h1>
                     <p className="lead" style={{ marginBottom: '32px' }}>Professional-grade pipes, taps, showers, and bathroom accessories for your modern home construction and renovation projects.</p>
-                    <div className="btn-group" style={{ display: 'flex', gap: '16px' }}>
+                    <div className="btn-group" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                         <a href="#products" className="btn btn-primary">Browse Products</a>
                         <a href="https://maps.app.goo.gl/dUgpgWuhCNYKxyWa8" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Visit Shop</a>
                     </div>
@@ -27,11 +27,10 @@ const Hero = () => {
                     transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                     style={{ position: 'relative' }}
                 >
-                    <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-md)', height: '450px', border: '8px solid white' }}>
+                    <div className="hero-image-wrapper">
                         <img 
                             src="/shop/shop1.jpeg" 
                             alt="Shop Inventory" 
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             onError={(e) => e.target.src = 'https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=800'}
                         />
                     </div>
