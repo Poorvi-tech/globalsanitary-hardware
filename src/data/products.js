@@ -32,9 +32,8 @@ export const products = [
     { id: 'san-3', name: 'Cura Concealed Sheat Camod', category: 'sanitary', brand: 'Cura', image: 'featurepro3.jpeg' },
     { id: 'san-4', name: 'Venus (Shrineet) Sink 24x18', category: 'sanitary', brand: 'Lovex', image: 'featurepro4.jpeg' },
     { id: 'san-5', name: 'Lovex Omega Washbasin 12x18', category: 'sanitary', brand: 'Lovex', image: 'featurepro5.jpeg' },
-    { id: 'san-9', name: '23 Cura Sheat Sheet', category: 'sanitary', brand: 'Cura', image: 'featurepro9' },
-    { id: 'san-10', name: 'Lovex 23" Sheat', category: 'sanitary', brand: 'Lovex', image: 'featurepro10' },
-    { id: 'san-12', name: 'Lovex 20 Sheet', category: 'sanitary', brand: 'Lovex', image: 'featurepro12' },
+    { id: 'san-9', name: '23 Cura Sheat Sheet', category: 'sanitary', brand: 'Cura', image: 'featurepro9.jpeg' },
+    { id: 'san-10', name: 'Lovex 23/20" Sheat', category: 'sanitary', brand: 'Lovex', image: 'featurepro10.jpeg' },
 
     // === CP FITTINGS & TAPS ===
     { id: 'fit-1', name: 'Benson 17 mm Bib Cock Square', category: 'fittings', brand: 'Benson', image: 'featurepro13.jpeg' },
@@ -47,7 +46,6 @@ export const products = [
     { id: 'fit-8', name: 'Lipka Swan Neck', category: 'fittings', brand: 'Lipka', image: 'featurepro20.jpeg' },
     { id: 'fit-9', name: 'Benson Sink Cock Square', category: 'fittings', brand: 'Benson', image: 'featurepro21.jpeg' },
     { id: 'fit-10', name: 'Benson Swan Cock Neck', category: 'fittings', brand: 'Benson', image: 'featurepro22.jpeg' },
-    { id: 'fit-11', name: 'Bluwave Opal 1 Flush Valve', category: 'fittings', brand: 'Bluwave', image: 'featurepro23.jpeg' },
     { id: 'fit-12', name: 'Bluwave Opal 12 Pillar Cock', category: 'fittings', brand: 'Bluwave', image: 'featurepro24.jpeg' },
     { id: 'fit-13', name: 'Bluwave Opal 2 in 1 Angle Cock', category: 'fittings', brand: 'Bluwave', image: 'featurepro25.jpeg' },
     { id: 'fit-14', name: 'Bluwave Opal 2 in 1 Bib Cock', category: 'fittings', brand: 'Bluwave', image: 'featurepro26.jpeg' },
