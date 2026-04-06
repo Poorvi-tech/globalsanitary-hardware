@@ -90,8 +90,6 @@ export const products = [
     { id: 'sh-10', name: 'Bluwave Spout Plain', category: 'fittings', brand: 'Bluwave', image: 'featurepro66.jpeg' },
     { id: 'sh-11', name: 'Lipka 4 x 4 Ultra Thin Shower', category: 'fittings', brand: 'Lipka', image: 'featurepro67.jpeg' },
     { id: 'sh-12', name: 'Lipka 6 x 6 Ultra Thin Shower', category: 'fittings', brand: 'Lipka', image: 'featurepro68.jpeg' },
-    { id: 'sh-13', name: 'Johnson Pedder Hand Shower', category: 'fittings', brand: 'Johnson Pedder', image: 'featurepro69.jpeg' },
-    { id: 'sh-14', name: 'Johnson Pedder Envy Health Faucet', category: 'fittings', brand: 'Johnson Pedder', image: 'featurepro70.jpeg' },
     { id: 'sh-15', name: 'Johnson Pedder Health Faucet Plaza', category: 'fittings', brand: 'Johnson Pedder', image: 'featurepro71.jpeg' },
     { id: 'sh-16', name: 'Johnson Pedder Spout Plain', category: 'fittings', brand: 'Johnson Pedder', image: 'featurepro72.jpeg' },
     { id: 'sh-17', name: 'Johnson Pedder Spout Tip Ton', category: 'fittings', brand: 'Johnson Pedder', image: 'featurepro73.jpeg' },
