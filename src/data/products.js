@@ -83,9 +83,6 @@ export const products = [
     // === SHOWERS & HEALTH FAUCETS ===
     { id: 'sh-1', name: 'Bluwave 4 x 4 Ultra Thin Shower', category: 'fittings', brand: 'Bluwave', image: 'featurepro57.jpeg' },
     { id: 'sh-2', name: 'Bluwave 6 x 6 Ultra Thin Shower', category: 'fittings', brand: 'Bluwave', image: 'featurepro58.jpeg' },
-    { id: 'sh-3', name: 'Bluwave 9 Shower Rod', category: 'fittings', brand: 'Bluwave', image: 'featurepro59.jpeg' },
-    { id: 'sh-4', name: 'Bluwave 12 Shower Rod', category: 'fittings', brand: 'Bluwave', image: 'featurepro60.jpeg' },
-    { id: 'sh-5', name: 'Bluwave 15 Shower Rod', category: 'fittings', brand: 'Bluwave', image: 'featurepro61.jpeg' },
     { id: 'sh-6', name: 'Bluwave Hand Shower', category: 'fittings', brand: 'Bluwave', image: 'featurepro62.jpeg' },
     { id: 'sh-7', name: 'Bluwave Health Faucet ABS', category: 'fittings', brand: 'Bluwave', image: 'featurepro63.jpeg' },
     { id: 'sh-8', name: 'Bluwave Health Faucet Mahendra', category: 'fittings', brand: 'Bluwave', image: 'featurepro64.jpeg' },
