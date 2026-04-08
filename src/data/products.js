@@ -161,8 +161,6 @@ export const products = [
     { id: 'hw-25', name: 'Fashner', category: 'hardware', brand: 'Generic', image: 'featurepro154.jpeg' },
     { id: 'hw-26', name: 'Khela', category: 'hardware', brand: 'Generic', image: 'featurepro155.jpeg' },
     { id: 'hw-27', name: 'Nal Chamach', category: 'hardware', brand: 'Generic', image: 'featurepro156.jpeg' },
-    { id: 'hw-28', name: 'Parda Patti (Clamp) Alu', category: 'hardware', brand: 'Generic', image: 'featurepro157.jpeg' },
-    { id: 'hw-29', name: 'Parda Pipe Steel', category: 'hardware', brand: 'Generic', image: 'featurepro158.jpeg' },
 
     // === SOLVENTS & ADHESIVES ===
     { id: 'sol-1', name: 'H P 234 (250) ml Solvent CPVC', category: 'solvents', brand: 'HP', image: 'featurepro159.jpeg' },
@@ -259,7 +257,6 @@ export const products = [
     { id: 'fit-47', name: 'Vectus Eco Nozzle Bib Cock', category: 'fittings', brand: 'Vectus', image: 'featurepro266.jpeg' },
     { id: 'fit-48', name: 'VECTUS Eco Sink Cock', category: 'fittings', brand: 'Vectus', image: 'featurepro267.jpeg' },
     { id: 'fit-49', name: 'VECTUS Juno Square Shower 4 x 5', category: 'fittings', brand: 'Vectus', image: 'featurepro268.jpeg' },
-    { id: 'fit-50', name: 'Polo Bib Cock', category: 'fittings', brand: 'Polo', image: 'featurepro269.jpeg' },
 
     // === PLASTO HARDWARE & ACCESSORIES ===
     { id: 'hw-30', name: 'Plasto 15 mm (1/2) Float Valve (Foot)', category: 'hardware', brand: 'Plasto', image: 'featurepro270.jpeg' },
@@ -269,7 +266,6 @@ export const products = [
     { id: 'hw-34', name: 'Plasto Cistern Kit Repair', category: 'hardware', brand: 'Plasto', image: 'featurepro274.jpeg' },
     { id: 'hw-35', name: 'Plasto Flush Body 25 mm Full Set', category: 'hardware', brand: 'Plasto', image: 'featurepro275.jpeg' },
     { id: 'hw-36', name: 'Plasto Gold 3/4 Garden Rope Satak', category: 'hardware', brand: 'Plasto', image: 'featurepro276.jpeg' },
-    { id: 'hw-37', name: 'PLASTO Golden 3/4 Satak', category: 'hardware', brand: 'Plasto', image: 'featurepro277.jpeg' },
     { id: 'hw-38', name: 'Plasto Handle Cistern', category: 'hardware', brand: 'Plasto', image: 'featurepro278.jpeg' },
     { id: 'hw-39', name: 'Plug', category: 'hardware', brand: 'Generic', image: 'featurepro279.jpeg' },
     { id: 'hw-42', name: 'Steel Nozzle', category: 'hardware', brand: 'Generic', image: 'featurepro282.jpeg' },
